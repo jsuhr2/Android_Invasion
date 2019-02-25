@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="8Bit Madden Glasses" translatesAutoresizingMaskIntoConstraints="NO" id="zNH-U2-aVn">
-                                <rect key="frame" x="162" y="552" width="50" height="50"/>
+                                <rect key="frame" x="162" y="576" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>

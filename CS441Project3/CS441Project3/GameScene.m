@@ -12,8 +12,6 @@
 @implementation GameScene {
     SKShapeNode *_spinnyNode;
     SKLabelNode *_label;
-    madden;
-    rotation, rotating_l, rotating_r;
 }
 
 - (void)didMoveToView:(SKView *)view {
@@ -82,29 +80,5 @@
     // Called before each frame is rendered
 }
 
--(IBAction)rotate:(id)sender
-{
-    if ([sender tag] > 0)
-        rotating_l = TRUE;
-    else
-        rotating_r = TRUE;
-    
-}
-
--(IBAction)rotateEnd:(id)sender
-{
-    if ([sender tag] > 0)
-        rotating_l = FALSE;
-    else
-        rotating_r = FALSE;
-    
-}
-
--(IBAction)thrust:(id)sender
-{
-    self.dx += 5 * cos(self.angle);
-    self.dy += 5 * sin(self.angle);
-    // NSLog(@"Thrust %f %f", self.dx, self.dy);
-}
 
 @end
