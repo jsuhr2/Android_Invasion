@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B1F676CC2215CCA400E903B7"
+               BlueprintIdentifier = "B1F67A032225FA0C00FD2E27"
                BuildableName = "CS441Project3.app"
                BlueprintName = "CS441Project3"
                ReferencedContainer = "container:CS441Project3.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B1F676EC2215CCA400E903B7"
+               BlueprintIdentifier = "B1F67A1D2225FA0C00FD2E27"
                BuildableName = "CS441Project3Tests.xctest"
                BlueprintName = "CS441Project3Tests"
                ReferencedContainer = "container:CS441Project3.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B1F676F72215CCA400E903B7"
+               BlueprintIdentifier = "B1F67A282225FA0C00FD2E27"
                BuildableName = "CS441Project3UITests.xctest"
                BlueprintName = "CS441Project3UITests"
                ReferencedContainer = "container:CS441Project3.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B1F676CC2215CCA400E903B7"
+            BlueprintIdentifier = "B1F67A032225FA0C00FD2E27"
             BuildableName = "CS441Project3.app"
             BlueprintName = "CS441Project3"
             ReferencedContainer = "container:CS441Project3.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B1F676CC2215CCA400E903B7"
+            BlueprintIdentifier = "B1F67A032225FA0C00FD2E27"
             BuildableName = "CS441Project3.app"
             BlueprintName = "CS441Project3"
             ReferencedContainer = "container:CS441Project3.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B1F676CC2215CCA400E903B7"
+            BlueprintIdentifier = "B1F67A032225FA0C00FD2E27"
             BuildableName = "CS441Project3.app"
             BlueprintName = "CS441Project3"
             ReferencedContainer = "container:CS441Project3.xcodeproj">
