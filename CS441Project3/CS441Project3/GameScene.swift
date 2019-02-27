@@ -84,12 +84,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             }
             num1.node?.removeFromParent()
             num2.node?.removeFromParent()
-        } else if(num1.categoryBitMask == PhysicsCategories.Blast && num2.categoryBitMask == PhysicsCategories.Enemy && (num2.node?.position.y)! < self.size.height){
-            if(num2.node != nil){
+        } else if num2.node != nil{
+            if(num1.categoryBitMask == PhysicsCategories.Blast && num2.categoryBitMask == PhysicsCategories.Enemy && (num2.node?.position.y)! < self.size.height){
                 explode(spawnPosition: num2.node!.position)
+                num1.node?.removeFromParent()
+                num2.node?.removeFromParent()
             }
-            num1.node?.removeFromParent()
-            num2.node?.removeFromParent()
         }
     }
     
