@@ -13,7 +13,7 @@ var score = 0
 
 class GameScene: SKScene, SKPhysicsContactDelegate{
     
-    let madden = SKSpriteNode(imageNamed: "Madden_Glasses")
+    let madden = SKSpriteNode(imageNamed: "Madden_Glasses_1")
     let scoreLabel = SKLabelNode()
     var lives = 3
     let livesLabel = SKLabelNode()
@@ -59,7 +59,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         self.addChild(background)
  
         backgroundColor = SKColor.white
-        madden.setScale(2.5)
+        madden.setScale(2)
         madden.position = CGPoint(x: self.size.width/2, y: self.size.height/5)
         madden.zPosition = 2
         madden.physicsBody = SKPhysicsBody(rectangleOf: madden.size)
