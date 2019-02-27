@@ -2,7 +2,7 @@
 //  GameScene.swift
 //  CS441Project3
 //
-//  Created by Jasper Suhr on 2/26/19.
+//  Created by Jasper Suhr on 2/14/19.
 //  Copyright © 2019 Jasper Suhr. All rights reserved.
 //
 
@@ -66,7 +66,46 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
+        var num1 = SKPhysicsBody()
+        var num2 = SKPhysicsBody()
+        if(contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask){
+            num1 = contact.bodyA
+            num2 = contact.bodyB
+        }else{
+            num1 = contact.bodyB
+            num2 = contact.bodyA
+        }
+        if(num1.categoryBitMask == PhysicsCategories.Madden && num2.categoryBitMask == PhysicsCategories.Enemy){
+            if(num1.node != nil){
+                explode(spawnPosition: num1.node!.position)
+            }
+            if(num2.node != nil){
+                explode(spawnPosition: num2.node!.position)
+            }
+            num1.node?.removeFromParent()
+            num2.node?.removeFromParent()
+        } else if(num1.categoryBitMask == PhysicsCategories.Blast && num2.categoryBitMask == PhysicsCategories.Enemy && (num2.node?.position.y)! < self.size.height){
+            if(num2.node != nil){
+                explode(spawnPosition: num2.node!.position)
+            }
+            num1.node?.removeFromParent()
+            num2.node?.removeFromParent()
+        }
+    }
+    
+    func explode(spawnPosition: CGPoint){
+        let e = SKSpriteNode(imageNamed: "explosion")
+        e.position = spawnPosition
+        e.zPosition = 3
+        e.setScale(0)
+        self.addChild(e)
         
+        let scaleIn = SKAction.scale(to: 0.1, duration: 0.1)
+        let fade = SKAction.fadeOut(withDuration: 0.1)
+        let delete = SKAction.removeFromParent()
+        
+        let explosionSequence = SKAction.sequence([scaleIn, fade, delete])
+        e.run(explosionSequence)
     }
     
     func start(){

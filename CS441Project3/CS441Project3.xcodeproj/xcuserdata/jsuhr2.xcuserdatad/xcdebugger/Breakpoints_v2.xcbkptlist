@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CS441Project3/GameScene.swift"
-            timestampString = "572940081.252818"
+            timestampString = "572941735.910126"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "didMove(to:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CS441Project3/GameScene.swift"
-            timestampString = "572940081.252818"
+            timestampString = "572942472.345283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "fire()"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CS441Project3/GameScene.swift"
-            timestampString = "572940081.252818"
+            timestampString = "572942472.345283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "spawnEnemy()"
             landmarkType = "7">
          </BreakpointContent>
