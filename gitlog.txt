@@ -1,0 +1,240 @@
+commit 6fd0239ef7b5cb035c766be1160559bde04b2d58
+Author: jsuhr2 <jsuhr2@binghamton.edu>
+Date:   Wed Feb 27 15:50:31 2019 -0500
+
+    began writing readme
+
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 8fdbf544a5dc7f94f2c5a9d3fa955deb353b35ba
+Author: Jasper Suhr <jsuhr2@bl-n21.pods.bu.int>
+Date:   Wed Feb 27 10:34:35 2019 -0500
+
+    changed background
+
+ .../UserInterfaceState.xcuserstate                  | Bin 28594 -> 29430 bytes
+ .../xcdebugger/Breakpoints_v2.xcbkptlist            |  20 ++++++++++++++++++--
+ .../Assets.xcassets/space.imageset/space.jpg        | Bin 86930 -> 60967 bytes
+ CS441Project3/CS441Project3/GameScene.swift         |   8 ++++----
+ 4 files changed, 22 insertions(+), 6 deletions(-)
+
+commit ab86d8e070d600010c57f74a64e2bfc70cfdc980
+Author: Jasper Suhr <jsuhr2@bl-n17.pods.bu.int>
+Date:   Wed Feb 27 01:55:49 2019 -0500
+
+    collisions working, need to addin lives and score system, but I need sleep more
+
+ .../UserInterfaceState.xcuserstate                 | Bin 28072 -> 28594 bytes
+ .../xcdebugger/Breakpoints_v2.xcbkptlist           |  18 ++++-----
+ CS441Project3/CS441Project3/AppDelegate.swift      |   2 +-
+ CS441Project3/CS441Project3/GameScene.swift        |  41 ++++++++++++++++++++-
+ .../CS441Project3/GameViewController.swift         |   2 +-
+ 5 files changed, 51 insertions(+), 12 deletions(-)
+
+commit 714eea85443e00d5418b06142d658ae0b0527e1c
+Author: Jasper Suhr <jsuhr2@bl-n17.pods.bu.int>
+Date:   Wed Feb 27 01:17:15 2019 -0500
+
+    have enemies and all movement and firing working, need to work on collisions, lives, and score
+
+ 8Bit Madden no glasses.png                         | Bin 333 -> 0 bytes
+ Android_Studio_icon.png                            | Bin 60504 -> 0 bytes
+ .../UserInterfaceState.xcuserstate                 | Bin 25377 -> 28072 bytes
+ .../xcdebugger/Breakpoints_v2.xcbkptlist           |  44 ++++++++--
+ .../explosion.imageset/Contents.json               |  21 +++++
+ .../explosion.imageset/explosion.png               | Bin 0 -> 279489 bytes
+ CS441Project3/CS441Project3/GameScene.swift        |  93 +++++++++++++++++++--
+ Madden_Glasses.png                                 | Bin 369 -> 0 bytes
+ apple-logo-rainbow.jpg                             | Bin 13484 -> 0 bytes
+ apple.png                                          | Bin 242638 -> 0 bytes
+ space.jpg                                          | Bin 86930 -> 0 bytes
+ 11 files changed, 146 insertions(+), 12 deletions(-)
+
+commit 174c298779fd34add3ced8bc6ab63140ace6ceac
+Author: Jasper Suhr <jsuhr2@bl-n04.pods.bu.int>
+Date:   Tue Feb 26 23:33:38 2019 -0500
+
+    have sprites, horizontal movement, and shooting working. need to work on vertical movement and enemies next
+
+ .../CS441Project3.xcodeproj/project.pbxproj        |  15 ++----
+ .../UserInterfaceState.xcuserstate                 | Bin 16690 -> 25377 bytes
+ .../xcdebugger/Breakpoints_v2.xcbkptlist           |  22 ++++++--
+ CS441Project3/CS441Project3/AppDelegate.swift      |   1 -
+ .../Base.lproj/LaunchScreen.storyboard             |   9 ++++
+ .../CS441Project3/Base.lproj/Main.storyboard       |   1 +
+ CS441Project3/CS441Project3/GameScene.swift        |  59 +++++++++++++++++++--
+ .../CS441Project3/GameViewController.swift         |   8 +++
+ 8 files changed, 94 insertions(+), 21 deletions(-)
+
+commit 5fec73f585a5518ac548262b1317eb531b823da9
+Author: Jasper Suhr <jsuhr2@bl-n35.pods.bu.int>
+Date:   Tue Feb 26 18:55:16 2019 -0500
+
+    added images
+
+ Android_Studio_icon.png | Bin 0 -> 60504 bytes
+ apple-logo-rainbow.jpg  | Bin 0 -> 13484 bytes
+ apple.png               | Bin 0 -> 242638 bytes
+ space.jpg               | Bin 0 -> 86930 bytes
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 0d6907abd973ddf5fd7f10adae5aa05e4e3d1b9a
+Author: Jasper Suhr <jsuhr2@bl-n35.pods.bu.int>
+Date:   Tue Feb 26 18:54:34 2019 -0500
+
+    restarted in swift to challenge myself
+
+ 8Bit Madden Glasses.png                            | Bin 369 -> 0 bytes
+ .../CS441Project3.xcodeproj/project.pbxproj        | 304 ++++++++++-----------
+ .../UserInterfaceState.xcuserstate                 | Bin 15344 -> 16690 bytes
+ .../xcdebugger/Breakpoints_v2.xcbkptlist           |  23 ++
+ .../xcschemes/CS441Project3.xcscheme               |  12 +-
+ .../xcschemes/xcschememanagement.plist             |   6 +-
+ CS441Project3/CS441Project3/AppDelegate.h          |  17 --
+ CS441Project3/CS441Project3/AppDelegate.m          |  52 ----
+ CS441Project3/CS441Project3/AppDelegate.swift      |  46 ++++
+ .../8Bit Madden Glasses.png                        | Bin 369 -> 0 bytes
+ .../8Bit Madden Glasses.imageset/Contents.json     |  21 --
+ .../8Bit Madden no glasses.png                     | Bin 333 -> 0 bytes
+ .../8Bit Madden no glasses.imageset/Contents.json  |  21 --
+ .../Android_Studio_icon.png                        | Bin 0 -> 60504 bytes
+ .../Android_Studio_icon.imageset/Contents.json     |  21 ++
+ .../AppIcon.appiconset/8Bit Madden Glasses-1.png   | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-10.png  | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-11.png  | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-12.png  | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-13.png  | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-14.png  | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-15.png  | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-16.png  | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-2.png   | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-3.png   | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-4.png   | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-5.png   | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-6.png   | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-7.png   | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-8.png   | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-9.png   | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses.png     | Bin 369 -> 0 bytes
+ .../AppIcon.appiconset/Contents.json               |  51 ++--
+ .../Madden_Glasses.imageset/Contents.json          |  21 ++
+ .../Madden_Glasses.imageset/Madden_Glasses.png     | Bin 0 -> 369 bytes
+ .../Assets.xcassets/apple.imageset/Contents.json   |  21 ++
+ .../Assets.xcassets/apple.imageset/apple.png       | Bin 0 -> 242638 bytes
+ .../Assets.xcassets/space.imageset/Contents.json   |  21 ++
+ .../Assets.xcassets/space.imageset/space.jpg       | Bin 0 -> 86930 bytes
+ .../Base.lproj/LaunchScreen.storyboard             |  12 +-
+ .../CS441Project3/Base.lproj/Main.storyboard       |  14 +-
+ CS441Project3/CS441Project3/GameScene.h            |  13 -
+ CS441Project3/CS441Project3/GameScene.m            |  84 ------
+ CS441Project3/CS441Project3/GameScene.swift        |  28 ++
+ CS441Project3/CS441Project3/GameViewController.h   |  15 -
+ CS441Project3/CS441Project3/GameViewController.m   |  53 ----
+ .../CS441Project3/GameViewController.swift         |  55 ++++
+ CS441Project3/CS441Project3/Info.plist             |   5 -
+ CS441Project3/CS441Project3/main.m                 |  16 --
+ .../CS441Project3Tests/CS441Project3Tests.m        |  39 ---
+ .../CS441Project3Tests/CS441Project3Tests.swift    |  36 +++
+ .../CS441Project3UITests/CS441Project3UITests.m    |  40 ---
+ .../CS441Project3UITests.swift                     |  36 +++
+ Madden_Glasses.png                                 | Bin 0 -> 369 bytes
+ 54 files changed, 491 insertions(+), 592 deletions(-)
+
+commit 52ed8e37fb0396df77f4420a6b099a039478bf6e
+Author: Jasper Suhr <jsuhr2@bl-n32.pods.bu.int>
+Date:   Sun Feb 24 20:47:09 2019 -0500
+
+    added icons, issues with pods computer I'm working on so witching to another
+
+ .../UserInterfaceState.xcuserstate                 | Bin 13508 -> 15344 bytes
+ CS441Project3/CS441Project3/AppDelegate.m          |   1 +
+ .../AppIcon.appiconset/8Bit Madden Glasses-1.png   | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-10.png  | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-11.png  | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-12.png  | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-13.png  | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-14.png  | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-15.png  | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-16.png  | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-2.png   | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-3.png   | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-4.png   | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-5.png   | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-6.png   | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-7.png   | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-8.png   | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses-9.png   | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/8Bit Madden Glasses.png     | Bin 0 -> 369 bytes
+ .../AppIcon.appiconset/Contents.json               |  51 ++++++++++++++-------
+ .../CS441Project3/Base.lproj/Main.storyboard       |   2 +-
+ CS441Project3/CS441Project3/GameScene.m            |  26 -----------
+ 22 files changed, 36 insertions(+), 44 deletions(-)
+
+commit b86bc5b3f4e00a26436afe8a36f8292180ba64ae
+Author: Jasper Suhr <jsuhr2@bl-n20.pods.bu.int>
+Date:   Thu Feb 21 18:45:35 2019 -0500
+
+    began building sprite movement
+
+ .../UserInterfaceState.xcuserstate                 | Bin 8443 -> 13508 bytes
+ .../8Bit Madden Glasses.png                        | Bin 0 -> 369 bytes
+ .../8Bit Madden Glasses.imageset/Contents.json     |  21 ++++++++++++++++
+ .../8Bit Madden no glasses.png                     | Bin 0 -> 333 bytes
+ .../8Bit Madden no glasses.imageset/Contents.json  |  21 ++++++++++++++++
+ .../AppIcon.appiconset/Contents.json               |  25 ++++++++++++++++++
+ .../CS441Project3/Assets.xcassets/Contents.json    |   6 +++++
+ .../CS441Project3/Base.lproj/Main.storyboard       |  25 +++++++++++++-----
+ CS441Project3/CS441Project3/GameScene.m            |  28 +++++++++++++++++++++
+ 9 files changed, 120 insertions(+), 6 deletions(-)
+
+commit f86b0b02d16c8660341216e428f9ffc1a0e9c89e
+Author: jsuhr2 <jsuhr2@binghamton.edu>
+Date:   Tue Feb 19 20:36:22 2019 -0500
+
+    added sprite art to files
+
+ 8Bit Madden Glasses.png    | Bin 0 -> 369 bytes
+ 8Bit Madden no glasses.png | Bin 0 -> 333 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 09c5267fb8db1a9f79cbabbacfefe6230fab3145
+Author: Jasper Suhr <jsuhr2@bl-n32.pods.bu.int>
+Date:   Thu Feb 14 11:20:04 2019 -0500
+
+    initial commit
+
+ .../CS441Project3.xcodeproj/project.pbxproj        | 544 +++++++++++++++++++++
+ .../project.xcworkspace/contents.xcworkspacedata   |   7 +
+ .../UserInterfaceState.xcuserstate                 | Bin 0 -> 8443 bytes
+ .../xcschemes/CS441Project3.xcscheme               | 111 +++++
+ .../xcschemes/xcschememanagement.plist             |  32 ++
+ CS441Project3/CS441Project3/Actions.sks            | Bin 0 -> 1892 bytes
+ CS441Project3/CS441Project3/AppDelegate.h          |  17 +
+ CS441Project3/CS441Project3/AppDelegate.m          |  51 ++
+ .../AppIcon.appiconset/Contents.json               |  68 +++
+ .../Spaceship.imageset/Contents.json               |  21 +
+ .../Spaceship.imageset/Spaceship.png               | Bin 0 -> 134723 bytes
+ .../Base.lproj/LaunchScreen.storyboard             |  27 +
+ .../CS441Project3/Base.lproj/Main.storyboard       |  26 +
+ CS441Project3/CS441Project3/GameScene.h            |  13 +
+ CS441Project3/CS441Project3/GameScene.m            |  82 ++++
+ CS441Project3/CS441Project3/GameScene.sks          | Bin 0 -> 4694 bytes
+ CS441Project3/CS441Project3/GameViewController.h   |  15 +
+ CS441Project3/CS441Project3/GameViewController.m   |  53 ++
+ CS441Project3/CS441Project3/Info.plist             |  47 ++
+ CS441Project3/CS441Project3/main.m                 |  16 +
+ .../CS441Project3Tests/CS441Project3Tests.m        |  39 ++
+ CS441Project3/CS441Project3Tests/Info.plist        |  22 +
+ .../CS441Project3UITests/CS441Project3UITests.m    |  40 ++
+ CS441Project3/CS441Project3UITests/Info.plist      |  22 +
+ 24 files changed, 1253 insertions(+)
+
+commit a8e7b2bc868f3f2da9f7d0872b0ac4adca0129a9
+Author: jsuhr2 <jsuhr2@binghamton.edu>
+Date:   Thu Feb 14 11:18:11 2019 -0500
+
+    Initial commit
+
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
