@@ -9,9 +9,14 @@
 import SpriteKit
 import GameplayKit
 
+var score = 0
+
 class GameScene: SKScene, SKPhysicsContactDelegate{
     
-    let madden = SKSpriteNode(imageNamed: "Madden_Glasses")
+    let madden = SKSpriteNode(imageNamed: "Madden_Glasses_1")
+    let scoreLabel = SKLabelNode()
+    var lives = 3
+    let livesLabel = SKLabelNode()
     
     let gameArea: CGRect
     
@@ -43,6 +48,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     
     override func didMove(to view: SKView) {
         
+        score = 0
+        
         self.physicsWorld.contactDelegate = self
 
         let background = SKSpriteNode(imageNamed: "space")
@@ -52,7 +59,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         self.addChild(background)
  
         backgroundColor = SKColor.white
-        madden.setScale(2.5)
+        madden.setScale(2)
         madden.position = CGPoint(x: self.size.width/2, y: self.size.height/5)
         madden.zPosition = 2
         madden.physicsBody = SKPhysicsBody(rectangleOf: madden.size)
@@ -62,7 +69,51 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         madden.physicsBody!.contactTestBitMask = PhysicsCategories.Enemy
         self.addChild(madden)
         
+        scoreLabel.text = "Score: 0"
+        scoreLabel.fontSize = 30
+        scoreLabel.fontColor = SKColor.white
+        scoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.left
+        scoreLabel.position = CGPoint(x: self.size.width * 0.1, y: self.size.height * 0.9)
+        scoreLabel.zPosition = 100
+        self.addChild(scoreLabel)
+        
+        livesLabel.text = "Lives: 3"
+        livesLabel.fontSize = 30
+        livesLabel.fontColor = SKColor.white
+        livesLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.right
+        livesLabel.position = CGPoint(x: self.size.width * 0.9, y: self.size.height * 0.9)
+        livesLabel.zPosition = 100
+        self.addChild(livesLabel)
+
         start()
+    }
+    
+    func increaseScore(){
+        score += 1
+        scoreLabel.text = "Score: \(score)"
+    }
+    
+    func decreaseLives(){
+        if(lives != 0){
+            lives -= 1
+            livesLabel.text = "Lives: \(lives)"
+            
+            let scaleUp = SKAction.scale(by: 2, duration: 0.2)
+            let scaleDown = SKAction.scale(by: 0.5, duration: 0.2)
+            let livesSequence = SKAction.sequence([scaleUp, scaleDown])
+            livesLabel.run(livesSequence)
+            
+            if(lives == 0){
+                end()
+            }
+        }
+    }
+    
+    func goToGameScene(){
+        let gameScene:GameScene = GameScene(size: self.view!.bounds.size) // create your new scene
+        let transition = SKTransition.fade(withDuration: 1.0) // create type of transition (you can check in documentation for more transtions)
+        gameScene.scaleMode = SKSceneScaleMode.fill
+        self.view!.presentScene(gameScene, transition: transition)
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -84,11 +135,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             }
             num1.node?.removeFromParent()
             num2.node?.removeFromParent()
+            end()
         } else if num2.node != nil{
             if(num1.categoryBitMask == PhysicsCategories.Blast && num2.categoryBitMask == PhysicsCategories.Enemy && (num2.node?.position.y)! < self.size.height){
                 explode(spawnPosition: num2.node!.position)
                 num1.node?.removeFromParent()
                 num2.node?.removeFromParent()
+                increaseScore()
             }
         }
     }
@@ -116,6 +169,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         self.run(spawnContinuous)
     }
     
+    func end(){
+        self.removeAllActions()
+        changeScene()
+    }
+    
+    func changeScene(){
+        let transition:SKTransition = SKTransition.fade(withDuration: 1)
+        let sceneMoveTo = GameOverScene(size: self.size)
+        self.view?.presentScene(sceneMoveTo, transition: transition)
+    }
+    
     func spawnEnemy(){
         let startX = random(min: gameArea.minX, max: gameArea.maxX)
         let endX = random(min: gameArea.minX, max: gameArea.maxX)
@@ -140,10 +204,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         enemy.zRotation = rotate
         
         let moveEnemy = SKAction.move(to: end, duration: 4)
+        let loseLife = SKAction.run(decreaseLives)
         let deleteEnemy = SKAction.removeFromParent()
-        let enemySequence = SKAction.sequence([moveEnemy, deleteEnemy])
+        let enemySequence = SKAction.sequence([moveEnemy, deleteEnemy, loseLife])
         enemy.run(enemySequence)
-        
     }
     
     func fire(){
